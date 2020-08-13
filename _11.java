@@ -1,6 +1,6 @@
 import java.util.*;
-
-class Test{
+//Burst Ballons MCM Pattern
+class _11{
 
     private static int solve(int[] arr){
 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Test{
+class Test2{
 
     private static int solve(int[] arr){
 
@@ -17,19 +17,19 @@ class Test{
 
     private static int helper(int[] arr, int start, int end){
         
-        if(start > end){
+        if(start == end){
             return 0;
         }
 
         int max = Integer.MIN_VALUE;
 
-        for(int k = start; k <= end; k++){
+        for(int k = start; k < end; k++){
             
-            int tmp = helper(arr, start, k - 1)
+            int tmp = helper(arr, start, k)
                         + helper(arr, k + 1, end)
-                        + (arr[start - 1] * arr[k] * arr[end + 1]);
+                        + (arr[start - 1] * arr[k] * arr[end]);
             
-            max = Math.max(max, tmp);
+            max = Math.min(max, tmp);
         }
 
         return max;

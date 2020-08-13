@@ -1,29 +1,16 @@
 package Strings;
-public class Test{
-    
 
-    private static void solve(char[] arr, int idx){
+import java.util.ArrayList;
+import java.util.*;
 
-        if(idx == arr.length){
-            System.out.println(arr);
-            return;
-        }
+class Test{
 
-        for(int i = 0; i < arr.length; i++){
-            if(arr[i] == '?'){
-                for(char ch = '0'; ch <= '1'; ch++){
-                    arr[i] = ch;
-                    solve(arr, idx + 1);
-                    arr[i] = '?';
-                }
-                return;
-            }
-        }
+     public static void main(String[] args) {
+        
+        int[] arr = {1,2,3};
 
-    }
+        List<Integer> list = Arrays.asList(arr);
 
-    public static void main(String[] args) {
-        char[] pattern = "1?11?00?1?".toCharArray();
-		solve(pattern, 0);
-    }
+
+     }
 }
